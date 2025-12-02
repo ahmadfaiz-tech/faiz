@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Content Analyzer - AI Content Analysis Tool by Ahmad Faiz">
+    <meta name="keywords" content="Ahmad, Faiz, Content Analyzer, AI, Project">
+    <meta name="author" content="Ahmad Faiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Content Analyzer - Ahmad Faiz</title>
+</head>
+<body id="top" onload="checkScrollPosition()" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" style="background:rgb(53,211,153);background:rgba(53,211,153, 0.975);" class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="index.html" class="kill-link-style xl:mr-6"><span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AF
+            </span></a>
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
+    </nav>
+
+  <div id="contact-me-pane" style="left:0;right:0;overflow-y:auto !important;margin-left: auto;margin-right: auto;max-height: 83%;" class="fixed duration-500 ease-in-out border-4 text-center border-green-400 border-b-0 p-6 md:p-12 ease contact-me-inactive rounded-t-xl bg-gray-900 text-gray-50 shadow-xl left-0 z-30 w-11/12 auto">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.620" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+    </div>
+    <div class="text-2xl no-select md:text-3xl lg:text-5xl font-extrabold">Contact Me</div>
+        <div class="absolute right-6 top-4 md:right-16 md:top-12">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleContactMe('hide')" class="cursor-pointer h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.420" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+        </div>
+
+        <div class="mt-10 text-left">
+            <div class="text-gray-50 text-xl md:text-2xl font-extrabold">Your Name</div>
+            <form action="https://formspree.io/f/meowdbej" method="POST">
+            <input type="text" required="" name="name" class="w-full mt-2 p-4 rounded-md font-bold text-gray-900 shadow text-xl md:text-2xl" placeholder="Enter name">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Email</div>
+            <input type="email" required="" name="email" class="w-full mt-2 p-4 rounded-md shadow text-xl text-gray-900 font-bold md:text-2xl" placeholder="Enter email">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Message</div>
+            <textarea type="text" required="" name="message" class="w-full mt-2 p-4 custom-textarea rounded-md shadow text-gray-900 font-bold text-xl md:text-2xl" placeholder="Enter message"></textarea>
+
+            <button type="submit" class="no-select px-4 p-2 text-xl mt-5 md:text-2xl lg:text-3xl border-4 border-gray-50 inline-block rounded-md cursor-pointer duration-200 hover:bg-gray-50 hover:text-gray-900 font-extrabold">Send Message</button>
+            </form>
+        </div>
+  </div>
+
+    <div class="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
+
+    <div class="xl:p-20 pt-10 xl:pb-22">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <span class="hidden md:block lg:block">
+            <a href="index.html" class="kill-link-style">
+                <span class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
+                    AF
+                </span>
+            </a>
+
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold">Contact Me</span>
+            </span>
+
+            <span class="block md:hidden lg:hidden p-4">
+                <a href="index.html" class="kill-link-style">
+                    <span class="inline-block rounded-md animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 text-2xl font-extrabold">
+                        AF
+                    </span>
+                </a>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="index.html" class="underline--magical text-xl font-extrabold">Work</a>
+                    <a href="journey.html" class="underline--magical text-xl font-extrabold ml-4">Journey</a>
+                    <a href="life.html" class="underline--magical text-xl font-extrabold ml-4">Life</a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+  <div class="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+    <div class="sm:w-12/12 md:w-12/12 lg:w-9/12 col-centered">
+        <a href="index.html#projects" class="kill-link-style">
+            <div class="animate__animated animate__fadeIn delay2 inline-flex items-center mb-4 p-2 px-4 text-lg md:text-xl font-extrabold text-gray-900 border-4 border-gray-900 rounded-md hover:bg-gray-900 hover:text-gray-50 duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Projects
+            </div>
+        </a>
+
+        <!-- Project Header -->
+        <div class="animate__animated animate__fadeIn delay2 flex items-center gap-4 p-4 pt-8">
+            <img src="img/contentanalyzer.svg" alt="Content Analyzer Logo" class="h-20 w-20 rounded-lg shadow-md">
+            <div>
+                <div class="text-4xl md:text-6xl font-extrabold">Content Analyzer</div>
+                <div class="text-xl md:text-2xl font-bold text-gray-600">Analyze content using AI</div>
+            </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">About This Project</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    <strong>Content Analyzer</strong> is a production-ready, enterprise-grade AI platform for comprehensive media analysis built with a hybrid architecture combining <strong>Python</strong> (for ML/AI processing) and <strong>Rust</strong> (for high-performance API gateway). This system leverages state-of-the-art machine learning models to analyze images, videos, and audio content, providing intelligent categorization, content understanding, and recommendation capabilities for social media platforms and content management systems.
+                </p>
+                <p class="mb-4">
+                    The platform integrates multiple cutting-edge AI models including <strong>CLIP</strong> for zero-shot classification, <strong>BLIP-2</strong> for image captioning, <strong>YOLOv8</strong> for object detection, <strong>Whisper</strong> for speech-to-text, and <strong>Ollama (Qwen2.5:14b)</strong> for advanced content summarization. With support for <strong>PaddleOCR, EasyOCR, and Pytesseract</strong>, the system implements a robust multi-engine OCR fallback strategy that handles 100+ languages with exceptional accuracy.
+                </p>
+                <p class="mb-4">
+                    Built specifically for integration with the NASI social media platform, Content Analyzer provides TikTok-style engagement metrics, viral velocity tracking, real-time recommendations, and comprehensive content moderation including NSFW detection and violence classification. The system features a sophisticated worker pool architecture with 18-24 concurrent workers, parallel frame processing, and advanced caching mechanisms.
+                </p>
+                <p class="mb-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <strong>⚡ Performance Note:</strong> This system is <strong>hardware-optimized</strong> and performance scales dramatically with available resources. With minimum hardware (4 cores, 8GB RAM, CPU only), processing takes ~8-10 minutes for 30 video frames. However, with recommended hardware (24-core CPU, 128GB RAM, NVIDIA RTX 4090 GPU), the same task completes in just <strong>3-5 seconds</strong> — a <strong>100-160x performance improvement</strong>. Performance depends on CPU cores, RAM capacity, and GPU acceleration capabilities.
+                </p>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Features</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image Analysis -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">🖼️ Image Analysis</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>CLIP Classification</strong> - Zero-shot, open-vocabulary categorization</li>
+                        <li><strong>Multi-OCR System</strong> - PaddleOCR (GPU), EasyOCR, Pytesseract fallback</li>
+                        <li><strong>Object Detection</strong> - YOLOv8 for 80 COCO classes</li>
+                        <li><strong>Image Captioning</strong> - BLIP-2 vision-language model</li>
+                        <li><strong>Feature Vectors</strong> - 512-dimensional embeddings for similarity</li>
+                        <li><strong>Quality Assessment</strong> - Brightness, contrast, color analysis</li>
+                        <li><strong>Scene Understanding</strong> - Indoor/outdoor, time of day detection</li>
+                    </ul>
+                </div>
+
+                <!-- Video Analysis -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">🎥 Video Analysis</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Smart Frame Extraction</strong> - Keyframe selection, configurable FPS</li>
+                        <li><strong>Scene Detection</strong> - Automatic scene boundary detection</li>
+                        <li><strong>Temporal Analysis</strong> - Content changes over time</li>
+                        <li><strong>Motion Detection</strong> - Camera movement and object motion</li>
+                        <li><strong>Object Tracking</strong> - YOLOv8 real-time detection</li>
+                        <li><strong>Video OCR</strong> - Text extraction with subtitle optimization</li>
+                        <li><strong>Parallel Processing</strong> - 20 frames concurrently analyzed</li>
+                        <li><strong>AI Summarization</strong> - Ollama/Claude-powered summaries</li>
+                    </ul>
+                </div>
+
+                <!-- Audio Analysis -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">🎵 Audio Analysis</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Speech-to-Text</strong> - Whisper model, multi-language support</li>
+                        <li><strong>Music Classification</strong> - Music vs. speech detection</li>
+                        <li><strong>Feature Extraction</strong> - MFCC, spectral analysis, tempo (BPM)</li>
+                        <li><strong>Audio Events</strong> - YAMNet for 521 audio classes</li>
+                        <li><strong>Sentiment from Speech</strong> - Emotion detection in audio</li>
+                        <li><strong>Audio Metadata</strong> - Duration, sample rate, channels</li>
+                    </ul>
+                </div>
+
+                <!-- Content Categorization -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">🏷️ Content Categorization</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>225+ Custom Labels</strong> - Comprehensive classification</li>
+                        <li><strong>15+ Primary Categories</strong> - Animals, People, Food, Tech, Sports, etc.</li>
+                        <li><strong>60+ Animal Types</strong> - Specific animal recognition</li>
+                        <li><strong>Sentiment Analysis</strong> - Positive/negative/neutral detection</li>
+                        <li><strong>Emotion Detection</strong> - Joy, anger, sadness, fear, surprise</li>
+                        <li><strong>NSFW Detection</strong> - Adult content classification</li>
+                        <li><strong>Violence Detection</strong> - Safety score calculation</li>
+                        <li><strong>Multi-language</strong> - Malay, Indonesian, English support</li>
+                    </ul>
+                </div>
+
+                <!-- Engagement Metrics -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">📊 Engagement Metrics (TikTok-style)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Real-time Tracking</strong> - Views, likes, comments, shares, saves</li>
+                        <li><strong>Viral Velocity</strong> - Trending speed calculation</li>
+                        <li><strong>Content Lifecycle</strong> - New → Rising → Peak → Declining → Evergreen</li>
+                        <li><strong>Engagement Rates</strong> - Completion rate, bounce rate analysis</li>
+                        <li><strong>Trending Detection</strong> - Real-time trending algorithms</li>
+                        <li><strong>User Preferences</strong> - Behavioral learning for recommendations</li>
+                        <li><strong>Performance Ranking</strong> - Category percentile tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Integration & APIs -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">🔗 Integration & APIs</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Dual API System</strong> - Python (8088) + Rust (8089) APIs</li>
+                        <li><strong>R2 Webhook</strong> - Cloudflare storage event handling</li>
+                        <li><strong>NASI Integration</strong> - Dedicated Golang backend endpoints</li>
+                        <li><strong>Batch Processing</strong> - Concurrent directory analysis</li>
+                        <li><strong>Async Workers</strong> - 18-24 worker pool for scalability</li>
+                        <li><strong>Recommendations</strong> - Content-based similarity search</li>
+                        <li><strong>Caching System</strong> - Redis-based performance optimization</li>
+                        <li><strong>For You Page (FYP)</strong> - Personalized content feed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-green-50 rounded-lg border-2 border-green-400">
+                <p class="text-lg font-bold text-gray-900">
+                    <strong>Comprehensive AI Analysis</strong> covering image, video, and audio content with <strong>15+ categories</strong>, <strong>225+ labels</strong>, <strong>6 AI models</strong>, and enterprise-grade engagement tracking for social media platforms.
+                </p>
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Technologies Used</div>
+
+            <!-- Backend Technologies -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Backend & Framework</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Python 3.12</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Rust 1.70+</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">FastAPI</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Actix-Web</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Tokio</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">PyO3</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Uvicorn</span>
+                </div>
+            </div>
+
+            <!-- AI/ML Models -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">AI & Machine Learning Models</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">CLIP (ViT-B/32)</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">BLIP-2</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">YOLOv8</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Whisper</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">ResNet50</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Ollama (Qwen2.5:14b)</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">YAMNet</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Llama 3.1:8b</span>
+                </div>
+            </div>
+
+            <!-- OCR Engines -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">OCR Engines (Multi-Fallback System)</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">PaddleOCR (GPU)</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">EasyOCR</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Pytesseract</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">100+ Languages</span>
+                </div>
+            </div>
+
+            <!-- Database & Storage -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Database & Storage</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">PostgreSQL 14+</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Redis</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">SQLx</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Snowflake ID</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Cloudflare R2</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">JSONB</span>
+                </div>
+            </div>
+
+            <!-- Computer Vision & Processing -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Computer Vision & Processing</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">PyTorch</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">TorchVision</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">OpenCV</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">Pillow</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">NumPy</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">scikit-learn</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">scikit-image</span>
+                    <span class="bg-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold">imageio</span>
+                </div>
+            </div>
+
+            <!-- Audio Processing -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Audio Processing</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">librosa</span>
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">soundfile</span>
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">resampy</span>
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">pyAudioAnalysis</span>
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">mutagen</span>
+                    <span class="bg-pink-400 text-gray-900 px-4 py-2 rounded-full font-bold">SpeechRecognition</span>
+                </div>
+            </div>
+
+            <!-- NLP & Text Processing -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">NLP & Text Processing</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-indigo-400 text-gray-900 px-4 py-2 rounded-full font-bold">Transformers (HuggingFace)</span>
+                    <span class="bg-indigo-400 text-gray-900 px-4 py-2 rounded-full font-bold">VADER Sentiment</span>
+                    <span class="bg-indigo-400 text-gray-900 px-4 py-2 rounded-full font-bold">TextBlob</span>
+                    <span class="bg-indigo-400 text-gray-900 px-4 py-2 rounded-full font-bold">NLTK</span>
+                    <span class="bg-indigo-400 text-gray-900 px-4 py-2 rounded-full font-bold">spaCy</span>
+                </div>
+            </div>
+
+            <!-- Infrastructure & Performance -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Infrastructure & Performance</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Worker Pool (24 workers)</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">TensorRT</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">CUDA</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Rayon</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">concurrent.futures</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">loguru</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">tracing</span>
+                </div>
+            </div>
+
+            <!-- Architecture Highlights -->
+            <div class="mt-6 p-4 bg-gray-900 text-gray-50 rounded-lg">
+                <p class="text-lg font-bold mb-2">Architecture Highlights:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Hybrid Architecture</strong> - Python for ML/AI + Rust for high-performance API gateway</li>
+                    <li><strong>Embedded Python in Rust</strong> - PyO3 integration for zero-overhead interop</li>
+                    <li><strong>Multi-OCR Fallback</strong> - PaddleOCR → EasyOCR → Pytesseract cascading</li>
+                    <li><strong>Worker Pool Concurrency</strong> - 18-24 concurrent workers with 75% CPU utilization</li>
+                    <li><strong>GPU Acceleration</strong> - TensorRT optimization with FP16 precision (2x speed boost)</li>
+                    <li><strong>Snowflake ID System</strong> - Distributed ID generation for scalability</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Performance Characteristics -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">⚡ Performance Characteristics</div>
+
+            <div class="p-4 bg-red-50 rounded-lg border-l-4 border-red-500 mb-6">
+                <p class="text-lg font-bold text-gray-900 mb-2">
+                    🔴 CRITICAL: Performance is Hardware-Dependent
+                </p>
+                <p class="text-gray-700">
+                    This system's performance scales <strong>dramatically</strong> with available hardware resources. The same 30-frame video analysis task can take anywhere from <strong>8-10 minutes</strong> on minimum hardware to just <strong>3-5 seconds</strong> on recommended hardware — a difference of up to <strong>160x in speed</strong>. GPU acceleration alone provides 2x speed boost, while parallel processing and high-core CPUs multiply this further.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Minimum Configuration -->
+                <div class="p-4 bg-gray-100 rounded-lg border-2 border-gray-400">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">💻 Minimum Configuration</h3>
+                    <div class="space-y-2 text-gray-700">
+                        <div><strong>CPU:</strong> 4 cores</div>
+                        <div><strong>RAM:</strong> 8GB</div>
+                        <div><strong>GPU:</strong> None (CPU fallback mode)</div>
+                        <div><strong>Storage:</strong> 20GB for models</div>
+                        <div class="pt-2 border-t-2 border-gray-300 mt-3">
+                            <p class="font-bold text-red-600">Performance:</p>
+                            <p>• 30 video frames: ~8-10 minutes</p>
+                            <p>• Single image: ~5-8 seconds</p>
+                            <p>• Limited parallelization</p>
+                            <p>• CPU-only OCR (slower)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Configuration -->
+                <div class="p-4 bg-green-100 rounded-lg border-2 border-green-500">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">🚀 Recommended Configuration</h3>
+                    <div class="space-y-2 text-gray-700">
+                        <div><strong>CPU:</strong> Intel i9-14900HX (24 cores, 32 threads)</div>
+                        <div><strong>RAM:</strong> 128GB DDR5-5600</div>
+                        <div><strong>GPU:</strong> NVIDIA RTX 4090 (8GB VRAM)</div>
+                        <div><strong>Storage:</strong> NVMe SSD (50GB recommended)</div>
+                        <div class="pt-2 border-t-2 border-green-400 mt-3">
+                            <p class="font-bold text-green-700">Performance:</p>
+                            <p class="font-bold text-green-600">• 30 video frames: 3-5 seconds (100-160x faster!)</p>
+                            <p>• Single image: <2 seconds</p>
+                            <p>• Full parallelization (20 frames concurrently)</p>
+                            <p>• GPU-accelerated OCR with TensorRT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Optimizations -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">🔧 Performance Optimizations Implemented</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">Worker Pool Optimization</h4>
+                        <p class="text-sm text-gray-700">18-24 concurrent workers utilizing 75% of CPU cores for optimal throughput without system overload.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">Parallel Frame Processing</h4>
+                        <p class="text-sm text-gray-700">Processes 20 video frames concurrently using Tokio async runtime for maximum parallelization.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">GPU Acceleration</h4>
+                        <p class="text-sm text-gray-700">PaddleOCR with TensorRT optimization and FP16 precision provides 2x speed boost on RTX GPUs.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">Frame Caching</h4>
+                        <p class="text-sm text-gray-700">In-memory LRU cache for up to 100 frames, utilizing 128GB RAM for instant retrieval.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">Batch Inference</h4>
+                        <p class="text-sm text-gray-700">Processes multiple images/frames in batches (batch_size=8-32) for improved GPU utilization.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                        <h4 class="font-bold mb-1">Model Caching</h4>
+                        <p class="text-sm text-gray-700">Pre-loaded models in memory eliminate initialization overhead for subsequent requests.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processing Time Benchmarks -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">📊 Processing Time Benchmarks</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border-2 border-gray-300">
+                        <thead class="bg-gray-800 text-white">
+                            <tr>
+                                <th class="px-4 py-2 text-left">Task</th>
+                                <th class="px-4 py-2 text-left">Minimum Hardware</th>
+                                <th class="px-4 py-2 text-left">Recommended Hardware</th>
+                                <th class="px-4 py-2 text-left">Speedup</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-bold">30 Video Frames</td>
+                                <td class="px-4 py-2 text-red-600">8-10 minutes</td>
+                                <td class="px-4 py-2 text-green-600 font-bold">3-5 seconds</td>
+                                <td class="px-4 py-2 font-bold">100-160x</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50">
+                                <td class="px-4 py-2 font-bold">Single Image Analysis</td>
+                                <td class="px-4 py-2">5-8 seconds</td>
+                                <td class="px-4 py-2 text-green-600"><2 seconds</td>
+                                <td class="px-4 py-2">3-4x</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-bold">Batch 100 Images</td>
+                                <td class="px-4 py-2">8-13 minutes</td>
+                                <td class="px-4 py-2 text-green-600">2-3 minutes</td>
+                                <td class="px-4 py-2">4-5x</td>
+                            </tr>
+                            <tr class="border-b bg-gray-50">
+                                <td class="px-4 py-2 font-bold">Short Video (30s)</td>
+                                <td class="px-4 py-2">10-15 minutes</td>
+                                <td class="px-4 py-2 text-green-600">3-5 seconds</td>
+                                <td class="px-4 py-2">120-180x</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-2 font-bold">Audio STT (1 min)</td>
+                                <td class="px-4 py-2">15-20 seconds</td>
+                                <td class="px-4 py-2 text-green-600">5-10 seconds</td>
+                                <td class="px-4 py-2">2-3x</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Hardware Impact Summary -->
+            <div class="p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-400">
+                <h3 class="text-xl font-bold mb-2 text-gray-800">💡 Key Takeaway</h3>
+                <p class="text-gray-700 mb-2">
+                    Performance is <strong>NOT a fixed attribute</strong> of this system — it is directly proportional to hardware capabilities:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                    <li><strong>CPU Cores:</strong> More cores = more parallel workers = faster batch processing</li>
+                    <li><strong>RAM Capacity:</strong> More RAM = larger frame cache = reduced I/O bottlenecks</li>
+                    <li><strong>GPU Acceleration:</strong> NVIDIA GPU with TensorRT = 2x baseline speed boost for OCR and inference</li>
+                    <li><strong>Storage Speed:</strong> NVMe SSD = faster model loading and video frame extraction</li>
+                </ul>
+                <p class="text-gray-700 mt-2 font-bold">
+                    The 100-160x performance difference demonstrates how hardware-optimized architecture can transform the same codebase from "slow" to "lightning-fast."
+                </p>
+            </div>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Screenshots</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- PLACEHOLDER: Add your screenshots here -->
+                <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-500 font-bold">[Screenshot 1]</span>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-500 font-bold">[Screenshot 2]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Run -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">How to Run (Localhost)</div>
+
+            <!-- System Requirements -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">System Requirements</h3>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>OS:</strong> Windows, Linux, macOS</li>
+                        <li><strong>Python:</strong> 3.9+ (3.12 recommended)</li>
+                        <li><strong>Rust:</strong> 1.70+ (latest stable)</li>
+                        <li><strong>PostgreSQL:</strong> 14+</li>
+                        <li><strong>Redis:</strong> Latest stable</li>
+                        <li><strong>RAM:</strong> 8GB minimum, 128GB recommended</li>
+                        <li><strong>CPU:</strong> 4+ cores (24 cores optimal)</li>
+                        <li><strong>GPU:</strong> NVIDIA RTX series with CUDA (optional but recommended)</li>
+                        <li><strong>Storage:</strong> 20GB minimum for models, 50GB recommended</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Option 1: Automated Setup (Windows) -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Option 1: Automated Setup (Windows - Recommended)</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Navigate to project directory
+cd contentanalysis
+
+# Run automated setup script
+setup.bat
+
+# This script will:
+# - Create Python virtual environment
+# - Install all Python dependencies
+# - Download required ML models
+# - Setup PostgreSQL database
+# - Build Rust API
+# - Configure environment variables</code></pre>
+                </div>
+            </div>
+
+            <!-- Option 2: Manual Setup -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Option 2: Manual Setup (All Platforms)</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># 1. Create Python virtual environment
+python -m venv venv312
+
+# Activate virtual environment
+# Windows:
+venv312\Scripts\activate
+# Linux/Mac:
+source venv312/bin/activate
+
+# 2. Install Python dependencies
+pip install -r requirements.txt
+
+# 3. Setup PostgreSQL database
+createdb content_analysis_db
+
+# 4. Build Rust API
+cd rust-api
+cargo build --release
+cd ..
+
+# 5. Configure environment
+cp .env.example .env
+# Edit .env with your settings</code></pre>
+                </div>
+            </div>
+
+            <!-- Environment Configuration -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Environment Configuration</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Database Configuration
+DATABASE_URL=postgresql://postgres:password@localhost/content_analysis
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=content_analysis_db
+
+# Redis Configuration
+REDIS_URL=redis://127.0.0.1/
+
+# AI Model Configuration
+OLLAMA_ENABLED=true
+OLLAMA_MODEL=qwen2.5:14b
+ANTHROPIC_API_KEY=your_key_here  # Optional
+
+# Performance Settings (adjust based on your hardware)
+WORKER_POOL_SIZE=20              # 75% of your CPU cores
+MAX_PARALLEL_FRAMES=20           # Concurrent frame processing
+PADDLE_OCR_USE_GPU=true          # Enable GPU acceleration
+PADDLE_OCR_GPU_MEM=8000          # GPU memory allocation (MB)</code></pre>
+                </div>
+                <div class="mt-3 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                    <p class="text-sm text-gray-700">
+                        <strong>⚙️ Performance Tuning:</strong> Adjust <code>WORKER_POOL_SIZE</code> and <code>MAX_PARALLEL_FRAMES</code> based on your CPU cores. For optimal performance, use 75% of available cores.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Starting the Services -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Starting the Services</h3>
+
+                <h4 class="font-bold mb-2 text-gray-700">Start All Services (Recommended)</h4>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg mb-4">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Windows
+start_services.bat
+
+# Linux/Mac
+./start_services.sh
+
+# This will start:
+# - Python ML API on port 8088
+# - Rust API Gateway on port 8089
+# Both services run concurrently</code></pre>
+                </div>
+
+                <h4 class="font-bold mb-2 text-gray-700">Start Services Separately</h4>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg mb-4">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Terminal 1: Start Python ML API (port 8088)
+python src/main.py server --port 8088
+# Or using uvicorn directly:
+uvicorn src.api.endpoints:app --host 0.0.0.0 --port 8088 --reload
+
+# Terminal 2: Start Rust API Gateway (port 8089)
+cd rust-api
+cargo run --release
+# Or run the binary directly:
+./target/release/rust-api</code></pre>
+                </div>
+            </div>
+
+            <!-- CLI Usage -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">CLI Usage (Without API)</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Analyze single image
+python src/main.py analyze --path "path/to/image.jpg"
+
+# Analyze single video
+python src/main.py analyze --path "path/to/video.mp4"
+
+# Batch analyze directory
+python src/main.py batch --path "media_folder" --output results.json
+
+# Analyze with specific output format
+python src/main.py analyze --path "video.mp4" --format json</code></pre>
+                </div>
+            </div>
+
+            <!-- Verify Installation -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Verify Installation</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Check Python API health
+curl http://localhost:8088/health
+
+# Check Rust API health
+curl http://localhost:8089/
+
+# View interactive API documentation
+# Python API: http://localhost:8088/docs
+# Rust API: http://localhost:8089/
+
+# Test image analysis
+curl -X POST http://localhost:8089/api/v1/analyze/image \
+  -F "file=@test_image.jpg"</code></pre>
+                </div>
+            </div>
+
+            <!-- Quick Start Summary -->
+            <div class="p-4 bg-green-50 rounded-lg border-2 border-green-400">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">🚀 Quick Start Summary</h4>
+                <ol class="list-decimal list-inside text-gray-700 space-y-1">
+                    <li>Run <code class="bg-gray-200 px-2 py-1 rounded">setup.bat</code> (Windows) or manually setup Python + Rust</li>
+                    <li>Configure <code class="bg-gray-200 px-2 py-1 rounded">.env</code> file (database, Redis, AI models)</li>
+                    <li>Run <code class="bg-gray-200 px-2 py-1 rounded">start_services.bat</code> or start services separately</li>
+                    <li>Python API available at <code class="bg-gray-200 px-2 py-1 rounded">http://localhost:8088</code></li>
+                    <li>Rust API available at <code class="bg-gray-200 px-2 py-1 rounded">http://localhost:8089</code></li>
+                    <li>Interactive docs at <code class="bg-gray-200 px-2 py-1 rounded">/docs</code> endpoints</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="w-full bg-gray-200 text-center block p-4">
+    <span class="font-extrabold text-gray-900 text-xl">
+        <div class="mt-1">© <script>document.write(new Date().getFullYear())</script> Ahmad Faiz. All Rights Reserved.</div></span>
+        <a href="https://www.linkedin.com/in/ahmad-faiz-132b95272/" target="_blank">
+        <div class="text-xl mt-3 font-extrabold text-gray-50 bg-gray-900 hover:bg-green-500 hover:border-green-500 duration-200 cursor-pointer hover:shadow-md hover:text-gray-900 border-4 p-2 inline-block rounded-md border-gray-900 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="relative -top-0.5 inline-block h-6 w-6">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+           My LinkedIn Page
+        </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

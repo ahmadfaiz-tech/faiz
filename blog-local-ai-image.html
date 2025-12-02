@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Local AI Image Generation with ComfyUI - Ahmad Faiz">
+    <meta name="keywords" content="Ahmad, Faiz, ComfyUI, Stable Diffusion, AI Image Generation, Local AI">
+    <meta name="author" content="Ahmad Faiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Local AI Image Generation - Ahmad Faiz</title>
+</head>
+<body id="top" onload="checkScrollPosition()" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" style="background:rgb(53,211,153);background:rgba(53,211,153, 0.975);" class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="index.html" class="kill-link-style xl:mr-6"><span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AF
+            </span></a>
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
+    </nav>
+
+  <div id="contact-me-pane" style="left:0;right:0;overflow-y:auto !important;margin-left: auto;margin-right: auto;max-height: 83%;" class="fixed duration-500 ease-in-out border-4 text-center border-green-400 border-b-0 p-6 md:p-12 ease contact-me-inactive rounded-t-xl bg-gray-900 text-gray-50 shadow-xl left-0 z-30 w-11/12 auto">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.620" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+    </div>
+    <div class="text-2xl no-select md:text-3xl lg:text-5xl font-extrabold">Contact Me</div>
+        <div class="absolute right-6 top-4 md:right-16 md:top-12">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleContactMe('hide')" class="cursor-pointer h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.420" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+        </div>
+
+        <div class="mt-10 text-left">
+            <div class="text-gray-50 text-xl md:text-2xl font-extrabold">Your Name</div>
+            <form action="https://formspree.io/f/meowdbej" method="POST">
+            <input type="text" required="" name="name" class="w-full mt-2 p-4 rounded-md font-bold text-gray-900 shadow text-xl md:text-2xl" placeholder="Enter name">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Email</div>
+            <input type="email" required="" name="email" class="w-full mt-2 p-4 rounded-md shadow text-xl text-gray-900 font-bold md:text-2xl" placeholder="Enter email">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Message</div>
+            <textarea type="text" required="" name="message" class="w-full mt-2 p-4 custom-textarea rounded-md shadow text-gray-900 font-bold text-xl md:text-2xl" placeholder="Enter message"></textarea>
+
+            <button type="submit" class="no-select px-4 p-2 text-xl mt-5 md:text-2xl lg:text-3xl border-4 border-gray-50 inline-block rounded-md cursor-pointer duration-200 hover:bg-gray-50 hover:text-gray-900 font-extrabold">Send Message</button>
+            </form>
+        </div>
+  </div>
+
+    <div class="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
+
+    <div class="xl:p-20 pt-10 xl:pb-22">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <span class="hidden md:block lg:block">
+            <a href="index.html" class="kill-link-style">
+                <span class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
+                    AF
+                </span>
+            </a>
+
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold">Contact Me</span>
+            </span>
+
+            <span class="block md:hidden lg:hidden p-4">
+                <a href="index.html" class="kill-link-style">
+                    <span class="inline-block rounded-md animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 text-2xl font-extrabold">
+                        AF
+                    </span>
+                </a>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="index.html" class="underline--magical text-xl font-extrabold">Work</a>
+                    <a href="journey.html" class="underline--magical text-xl font-extrabold ml-4">Journey</a>
+                    <a href="life.html" class="underline--magical text-xl font-extrabold ml-4">Life</a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+  <div class="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+    <div class="sm:w-12/12 md:w-12/12 lg:w-9/12 col-centered">
+        <a href="index.html#extras" class="kill-link-style">
+            <div class="animate__animated animate__fadeIn delay2 inline-flex items-center mb-4 p-2 px-4 text-lg md:text-xl font-extrabold text-gray-900 border-4 border-gray-900 rounded-md hover:bg-gray-900 hover:text-gray-50 duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Developer Utilities
+            </div>
+        </a>
+
+        <!-- Blog Header -->
+        <div class="animate__animated animate__fadeIn delay2 flex items-center gap-4 p-4 pt-8">
+            <img src="img/comfyui.webp" alt="ComfyUI Logo" class="h-20 w-20 rounded-lg shadow-md bg-white p-2">
+            <div>
+                <div class="text-4xl md:text-6xl font-extrabold">Local AI Image Generation</div>
+                <div class="text-xl md:text-2xl font-bold text-gray-600">Mastering ComfyUI & Stable Diffusion</div>
+            </div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Why Local AI Image Generation?</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    In today's creative landscape, AI-powered image generation has become an essential tool for designers, developers, and content creators. While cloud-based services like Midjourney and DALL-E offer convenience, running AI image generation locally provides unparalleled advantages in terms of privacy, cost-efficiency, and customization.
+                </p>
+                <p class="mb-4">
+                    I have extensive experience setting up and optimizing local AI image generation workflows using ComfyUI, a powerful node-based interface for Stable Diffusion. This allows me to produce high-quality, professional imagery without relying on external services or subscription fees.
+                </p>
+            </div>
+        </div>
+
+        <!-- What is ComfyUI -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">What is ComfyUI?</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    ComfyUI is a modular, node-based graphical user interface for Stable Diffusion that provides complete control over the image generation pipeline. Unlike simpler interfaces, ComfyUI exposes every step of the diffusion process, allowing users to create complex workflows that would be impossible with traditional tools.
+                </p>
+                <p class="mb-4">
+                    Key advantages of ComfyUI include:
+                </p>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>Visual Workflow Design:</strong> Create and modify generation pipelines by connecting nodes visually</li>
+                    <li><strong>Memory Efficiency:</strong> Optimized for lower VRAM usage compared to other interfaces</li>
+                    <li><strong>Reproducibility:</strong> Save and share entire workflows as JSON files</li>
+                    <li><strong>Extensibility:</strong> Vast ecosystem of custom nodes and extensions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- My Skills & Experience -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">My Skills & Experience</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Through hands-on experience, I have developed proficiency in:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Model Management</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>Installing and configuring checkpoint models (SD 1.5, SDXL, SD 3)</li>
+                        <li>Using LoRA and embedding models for style customization</li>
+                        <li>Optimizing model loading for faster generation times</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Workflow Development</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>Building custom node graphs for specific use cases</li>
+                        <li>Implementing ControlNet for precise image control</li>
+                        <li>Creating upscaling and enhancement pipelines</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Hardware Optimization</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>Configuring CUDA and GPU acceleration</li>
+                        <li>Memory management for large batch generations</li>
+                        <li>Setting up for both NVIDIA and AMD GPUs</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Advanced Techniques</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>Inpainting and outpainting workflows</li>
+                        <li>Image-to-image transformations</li>
+                        <li>Batch processing automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Stack -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Technical Stack</div>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">ComfyUI</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Stable Diffusion</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Python</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">PyTorch</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">CUDA</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">ControlNet</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">LoRA</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">SDXL</span>
+            </div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Practical Applications</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Local AI image generation is valuable for various professional scenarios:
+                </p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Rapid Prototyping:</strong> Quickly generate mockups and visual concepts for client presentations</li>
+                    <li><strong>Content Creation:</strong> Produce unique imagery for websites, social media, and marketing materials</li>
+                    <li><strong>Design Exploration:</strong> Experiment with different visual styles and compositions</li>
+                    <li><strong>Asset Generation:</strong> Create textures, backgrounds, and UI elements for applications</li>
+                    <li><strong>Privacy-Sensitive Projects:</strong> Generate images without sending data to external servers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Benefits for Organizations -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6 bg-gray-900 text-gray-50 rounded-lg">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Benefits for Your Organization</div>
+            <div class="text-lg md:text-xl leading-relaxed">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">$0</div>
+                        <div class="font-bold">Per-Image Cost</div>
+                        <div class="text-sm text-gray-300">No API fees or subscriptions after initial setup</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">100%</div>
+                        <div class="font-bold">Data Privacy</div>
+                        <div class="text-sm text-gray-300">All processing happens on local hardware</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">24/7</div>
+                        <div class="font-bold">Availability</div>
+                        <div class="text-sm text-gray-300">No rate limits or service downtime concerns</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="w-full bg-gray-200 text-center block p-4">
+    <span class="font-extrabold text-gray-900 text-xl">
+        <div class="mt-1">© <script>document.write(new Date().getFullYear())</script> Ahmad Faiz. All Rights Reserved.</div></span>
+        <a href="https://www.linkedin.com/in/ahmad-faiz-132b95272/" target="_blank">
+        <div class="text-xl mt-3 font-extrabold text-gray-50 bg-gray-900 hover:bg-green-500 hover:border-green-500 duration-200 cursor-pointer hover:shadow-md hover:text-gray-900 border-4 p-2 inline-block rounded-md border-gray-900 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="relative -top-0.5 inline-block h-6 w-6">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+           My LinkedIn Page
+        </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

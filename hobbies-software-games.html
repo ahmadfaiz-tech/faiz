@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Software and Games Installation and Fixes - Ahmad Faiz">
+    <meta name="keywords" content="Ahmad, Faiz, Software Installation, Games, Troubleshooting, Windows, Performance">
+    <meta name="author" content="Ahmad Faiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Software and Games Installation - Ahmad Faiz</title>
+</head>
+<body id="top" onload="checkScrollPosition()" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" style="background:rgb(53,211,153);background:rgba(53,211,153, 0.975);" class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="index.html" class="kill-link-style xl:mr-6"><span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AF
+            </span></a>
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
+    </nav>
+
+  <div id="contact-me-pane" style="left:0;right:0;overflow-y:auto !important;margin-left: auto;margin-right: auto;max-height: 83%;" class="fixed duration-500 ease-in-out border-4 text-center border-green-400 border-b-0 p-6 md:p-12 ease contact-me-inactive rounded-t-xl bg-gray-900 text-gray-50 shadow-xl left-0 z-30 w-11/12 auto">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.620" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+    </div>
+    <div class="text-2xl no-select md:text-3xl lg:text-5xl font-extrabold">Contact Me</div>
+        <div class="absolute right-6 top-4 md:right-16 md:top-12">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleContactMe('hide')" class="cursor-pointer h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.420" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+        </div>
+
+        <div class="mt-10 text-left">
+            <div class="text-gray-50 text-xl md:text-2xl font-extrabold">Your Name</div>
+            <form action="https://formspree.io/f/meowdbej" method="POST">
+            <input type="text" required="" name="name" class="w-full mt-2 p-4 rounded-md font-bold text-gray-900 shadow text-xl md:text-2xl" placeholder="Enter name">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Email</div>
+            <input type="email" required="" name="email" class="w-full mt-2 p-4 rounded-md shadow text-xl text-gray-900 font-bold md:text-2xl" placeholder="Enter email">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Message</div>
+            <textarea type="text" required="" name="message" class="w-full mt-2 p-4 custom-textarea rounded-md shadow text-gray-900 font-bold text-xl md:text-2xl" placeholder="Enter message"></textarea>
+
+            <button type="submit" class="no-select px-4 p-2 text-xl mt-5 md:text-2xl lg:text-3xl border-4 border-gray-50 inline-block rounded-md cursor-pointer duration-200 hover:bg-gray-50 hover:text-gray-900 font-extrabold">Send Message</button>
+            </form>
+        </div>
+  </div>
+
+    <div class="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
+
+    <div class="xl:p-20 pt-10 xl:pb-22">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <span class="hidden md:block lg:block">
+            <a href="index.html" class="kill-link-style">
+                <span class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
+                    AF
+                </span>
+            </a>
+
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold">Contact Me</span>
+            </span>
+
+            <span class="block md:hidden lg:hidden p-4">
+                <a href="index.html" class="kill-link-style">
+                    <span class="inline-block rounded-md animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 text-2xl font-extrabold">
+                        AF
+                    </span>
+                </a>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="index.html" class="underline--magical text-xl font-extrabold">Work</a>
+                    <a href="journey.html" class="underline--magical text-xl font-extrabold ml-4">Journey</a>
+                    <a href="life.html" class="underline--magical text-xl font-extrabold ml-4">Life</a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+  <div class="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+    <div class="sm:w-12/12 md:w-12/12 lg:w-9/12 col-centered">
+        <a href="index.html#media" class="kill-link-style">
+            <div class="animate__animated animate__fadeIn delay2 inline-flex items-center mb-4 p-2 px-4 text-lg md:text-xl font-extrabold text-gray-900 border-4 border-gray-900 rounded-md hover:bg-gray-900 hover:text-gray-50 duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Technical Hobbies
+            </div>
+        </a>
+
+        <!-- Header -->
+        <div class="animate__animated animate__fadeIn delay2 p-4 pt-8">
+            <div class="text-4xl md:text-6xl font-extrabold">Software and Games Installation</div>
+            <div class="text-xl md:text-2xl font-bold text-gray-600 mt-2">Download, Install, Configure & Troubleshoot</div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">My Experience</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    I have years of experience downloading and installing games and software from various sources. I know which websites are reliable, how to navigate through download pages, and how to properly install and configure applications to work flawlessly.
+                </p>
+                <p class="mb-4">
+                    From pre-installed/repack games to professional software suites, I've mastered the art of finding, downloading, and setting up applications — including handling cracks, patches, and activation when needed.
+                </p>
+            </div>
+        </div>
+
+        <!-- Download Sources -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Trusted Download Sources</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="bg-blue-900 text-white p-4 rounded-lg border-2 border-blue-400">
+                    <div class="font-extrabold text-xl text-blue-400 mb-2">Games Sources</div>
+                    <ul class="text-gray-300 space-y-2">
+                        <li><strong>OceanOfGames</strong> — Pre-installed games, easy setup</li>
+                        <li><strong>FitGirl Repacks</strong> — Highly compressed repacks</li>
+                        <li><strong>DODI Repacks</strong> — Fast installation repacks</li>
+                        <li><strong>SteamUnlocked</strong> — Pre-installed Steam games</li>
+                        <li><strong>GOG Games</strong> — DRM-free game downloads</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-900 text-white p-4 rounded-lg border-2 border-purple-400">
+                    <div class="font-extrabold text-xl text-purple-400 mb-2">Software Sources</div>
+                    <ul class="text-gray-300 space-y-2">
+                        <li><strong>GetIntoPC</strong> — Full software with activation</li>
+                        <li><strong>FileCR</strong> — Clean software downloads</li>
+                        <li><strong>CracksHash</strong> — Latest software releases</li>
+                        <li><strong>1337x</strong> — Verified torrent uploads</li>
+                        <li><strong>Rutracker</strong> — Russian tracker with rare software</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- What I Can Install -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">What I Can Install</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Games</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>AAA titles (GTA, Assassin's Creed, etc.)</li>
+                        <li>Pre-installed / Repack versions</li>
+                        <li>Older/retro games</li>
+                        <li>Emulator ROMs (PS2, PSP, Switch)</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Creative Software</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>Adobe Suite (Photoshop, Premiere, etc.)</li>
+                        <li>Autodesk (AutoCAD, Maya, 3ds Max)</li>
+                        <li>CorelDRAW, Affinity</li>
+                        <li>FL Studio, Ableton, Cubase</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg border-2 border-green-400">
+                    <div class="font-extrabold text-xl mb-2">Development Tools</div>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>JetBrains IDEs (IntelliJ, PyCharm)</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Visual Studio, VS Code</li>
+                        <li>VMware, Parallels</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installation Skills -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Installation Skills</div>
+            <div class="space-y-4">
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg">
+                    <div class="font-extrabold text-green-400 mb-2">Navigating Download Sites</div>
+                    <p class="text-gray-300">I know how to identify real download buttons vs fake ads, avoid malware, and find the fastest mirrors. Years of experience means I can navigate any download site efficiently.</p>
+                </div>
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg">
+                    <div class="font-extrabold text-green-400 mb-2">Handling Repacks & Pre-installed Games</div>
+                    <p class="text-gray-300">Understanding how to extract multi-part archives, run setup with proper settings, disable antivirus temporarily, and apply cracks/patches correctly.</p>
+                </div>
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg">
+                    <div class="font-extrabold text-green-400 mb-2">Software Activation</div>
+                    <p class="text-gray-300">Experienced with various activation methods — keygens, patches, registry edits, hosts file blocking, and offline activation for software that requires it.</p>
+                </div>
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg">
+                    <div class="font-extrabold text-green-400 mb-2">Troubleshooting Failed Installations</div>
+                    <p class="text-gray-300">When installations fail, I know how to diagnose — checking error logs, verifying file integrity, ensuring dependencies (DirectX, VC++, .NET) are installed, and fixing permission issues.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NetLimiter Strategy -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">The NetLimiter Strategy</div>
+            <div class="bg-red-900 text-white p-6 rounded-lg border-2 border-red-400">
+                <div class="font-extrabold text-2xl text-red-400 mb-3">For Software That Keeps Getting Detected</div>
+                <p class="text-gray-300 mb-4">
+                    Some software like <strong>Adobe apps (Photoshop, Illustrator, Premiere, etc.)</strong> are notorious for detecting cracks and reverting to trial mode. Even after fixing Windows Defender multiple times, they still manage to phone home and verify licenses.
+                </p>
+                <div class="bg-red-950 p-4 rounded-lg mb-4">
+                    <div class="font-extrabold text-red-400 mb-2">Solution: NetLimiter</div>
+                    <p class="text-gray-300 mb-3">Instead of fighting with hosts file or Windows Firewall (which Adobe can bypass), I use <strong>NetLimiter</strong> to completely block the application's internet access:</p>
+                    <ul class="text-gray-300 space-y-2">
+                        <li><strong>Block Inbound:</strong> Prevent Adobe servers from sending license validation requests</li>
+                        <li><strong>Block Outbound:</strong> Stop the app from sending telemetry and license checks</li>
+                        <li><strong>Per-Application Control:</strong> Only block specific executables, not the entire system</li>
+                        <li><strong>Persistent Rules:</strong> Rules stay active even after restart</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-3 rounded-lg">
+                        <div class="font-extrabold text-yellow-400 mb-1">Why Not Windows Firewall?</div>
+                        <p class="text-gray-400 text-sm">Adobe apps are smart — they use multiple processes and can bypass basic firewall rules. NetLimiter catches everything.</p>
+                    </div>
+                    <div class="bg-gray-800 p-3 rounded-lg">
+                        <div class="font-extrabold text-yellow-400 mb-1">Why Not Hosts File?</div>
+                        <p class="text-gray-400 text-sm">Adobe constantly changes their activation servers. Maintaining hosts file is tedious. NetLimiter just blocks all traffic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software That Need Blocking -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Software I Block with NetLimiter</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-blue-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe Photoshop</div>
+                </div>
+                <div class="bg-blue-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe Illustrator</div>
+                </div>
+                <div class="bg-blue-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe Premiere</div>
+                </div>
+                <div class="bg-blue-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe After Effects</div>
+                </div>
+                <div class="bg-purple-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe XD</div>
+                </div>
+                <div class="bg-purple-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe Lightroom</div>
+                </div>
+                <div class="bg-purple-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe Audition</div>
+                </div>
+                <div class="bg-purple-900 text-white p-3 rounded-lg text-center">
+                    <div class="font-extrabold">Adobe InDesign</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Issues I Solve -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Common Issues I Solve</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-red-100 p-4 rounded-lg border-l-4 border-red-500">
+                    <div class="font-extrabold text-red-700 mb-1">"ISDone.dll / Unarc.dll Error"</div>
+                    <p class="text-gray-700 text-sm">Common in repacks — usually RAM issue or corrupted download. I know the fixes.</p>
+                </div>
+                <div class="bg-red-100 p-4 rounded-lg border-l-4 border-red-500">
+                    <div class="font-extrabold text-red-700 mb-1">"Game crashes on launch"</div>
+                    <p class="text-gray-700 text-sm">Missing DLLs, outdated drivers, or antivirus blocking. Systematic troubleshooting.</p>
+                </div>
+                <div class="bg-red-100 p-4 rounded-lg border-l-4 border-red-500">
+                    <div class="font-extrabold text-red-700 mb-1">"Activation failed / Trial expired"</div>
+                    <p class="text-gray-700 text-sm">Wrong crack version, internet blocking needed, or registry cleanup required.</p>
+                </div>
+                <div class="bg-red-100 p-4 rounded-lg border-l-4 border-red-500">
+                    <div class="font-extrabold text-red-700 mb-1">"Antivirus deleting files"</div>
+                    <p class="text-gray-700 text-sm">Adding exclusions, using Windows Defender controls, or temporary disable during install.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools I Use -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Tools I Use</div>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">7-Zip / WinRAR</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">qBittorrent</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">IDM (Internet Download Manager)</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">JDownloader</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">DirectX / VC++ AIO</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Revo Uninstaller</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Process Monitor</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Daemon Tools</span>
+                <span class="bg-red-500 text-white px-4 py-2 rounded-full font-bold">NetLimiter</span>
+            </div>
+        </div>
+
+        <!-- Pro Tips -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6 bg-green-400 text-gray-900 rounded-lg">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Pro Tips</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <div class="font-extrabold mb-1">Always check comments/reviews</div>
+                    <p class="text-sm">Before downloading, read user comments to verify the file works and is safe.</p>
+                </div>
+                <div>
+                    <div class="font-extrabold mb-1">Verify file checksums</div>
+                    <p class="text-sm">Use MD5/SHA256 to ensure downloaded files match the original.</p>
+                </div>
+                <div>
+                    <div class="font-extrabold mb-1">Run as Administrator</div>
+                    <p class="text-sm">Many installers need admin rights — always right-click and run as admin.</p>
+                </div>
+                <div>
+                    <div class="font-extrabold mb-1">Disable internet when activating</div>
+                    <p class="text-sm">Some software needs offline activation to prevent license check.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="w-full bg-gray-200 text-center block p-4">
+    <span class="font-extrabold text-gray-900 text-xl">
+        <div class="mt-1">© <script>document.write(new Date().getFullYear())</script> Ahmad Faiz. All Rights Reserved.</div></span>
+        <a href="https://www.linkedin.com/in/ahmad-faiz-132b95272/" target="_blank">
+        <div class="text-xl mt-3 font-extrabold text-gray-50 bg-gray-900 hover:bg-green-500 hover:border-green-500 duration-200 cursor-pointer hover:shadow-md hover:text-gray-900 border-4 p-2 inline-block rounded-md border-gray-900 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="relative -top-0.5 inline-block h-6 w-6">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+           My LinkedIn Page
+        </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

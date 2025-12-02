@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nasi - Social Media Platform by Ahmad Faiz">
+    <meta name="keywords" content="Ahmad, Faiz, Nasi, Social Media, Project">
+    <meta name="author" content="Ahmad Faiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Nasi - Ahmad Faiz</title>
+</head>
+<body id="top" onload="checkScrollPosition()" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" style="background:rgb(53,211,153);background:rgba(53,211,153, 0.975);" class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="index.html" class="kill-link-style xl:mr-6"><span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AF
+            </span></a>
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
+    </nav>
+
+  <div id="contact-me-pane" style="left:0;right:0;overflow-y:auto !important;margin-left: auto;margin-right: auto;max-height: 83%;" class="fixed duration-500 ease-in-out border-4 text-center border-green-400 border-b-0 p-6 md:p-12 ease contact-me-inactive rounded-t-xl bg-gray-900 text-gray-50 shadow-xl left-0 z-30 w-11/12 auto">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.620" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+    </div>
+    <div class="text-2xl no-select md:text-3xl lg:text-5xl font-extrabold">Contact Me</div>
+        <div class="absolute right-6 top-4 md:right-16 md:top-12">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleContactMe('hide')" class="cursor-pointer h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.420" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+        </div>
+
+        <div class="mt-10 text-left">
+            <div class="text-gray-50 text-xl md:text-2xl font-extrabold">Your Name</div>
+            <form action="https://formspree.io/f/meowdbej" method="POST">
+            <input type="text" required="" name="name" class="w-full mt-2 p-4 rounded-md font-bold text-gray-900 shadow text-xl md:text-2xl" placeholder="Enter name">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Email</div>
+            <input type="email" required="" name="email" class="w-full mt-2 p-4 rounded-md shadow text-xl text-gray-900 font-bold md:text-2xl" placeholder="Enter email">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Message</div>
+            <textarea type="text" required="" name="message" class="w-full mt-2 p-4 custom-textarea rounded-md shadow text-gray-900 font-bold text-xl md:text-2xl" placeholder="Enter message"></textarea>
+
+            <button type="submit" class="no-select px-4 p-2 text-xl mt-5 md:text-2xl lg:text-3xl border-4 border-gray-50 inline-block rounded-md cursor-pointer duration-200 hover:bg-gray-50 hover:text-gray-900 font-extrabold">Send Message <svg xmlns="http://www.w3.org/2000/svg" class="h-7 -mt-1 ml-1 inline-block w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" class="inline-block" stroke-linejoin="round" stroke-width="3.420" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg></button>
+            </form>
+        </div>
+  </div>
+
+    <div class="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
+
+    <div class="xl:p-20 pt-10 xl:pb-22">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <span class="hidden md:block lg:block">
+            <a href="index.html" class="kill-link-style">
+                <span class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
+                    AF
+                </span>
+            </a>
+
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold">Contact Me</span>
+            </span>
+
+            <span class="block md:hidden lg:hidden p-4">
+                <a href="index.html" class="kill-link-style">
+                    <span class="inline-block rounded-md animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 text-2xl font-extrabold">
+                        AF
+                    </span>
+                </a>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="index.html" class="underline--magical text-xl font-extrabold">Work</a>
+                    <a href="journey.html" class="underline--magical text-xl font-extrabold ml-4">Journey</a>
+                    <a href="life.html" class="underline--magical text-xl font-extrabold ml-4">Life</a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+  <div class="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+    <div class="sm:w-12/12 md:w-12/12 lg:w-9/12 col-centered">
+        <a href="index.html#projects" class="kill-link-style">
+            <div class="animate__animated animate__fadeIn delay2 inline-flex items-center mb-4 p-2 px-4 text-lg md:text-xl font-extrabold text-gray-900 border-4 border-gray-900 rounded-md hover:bg-gray-900 hover:text-gray-50 duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Projects
+            </div>
+        </a>
+
+        <!-- Project Header -->
+        <div class="animate__animated animate__fadeIn delay2 flex items-center gap-4 p-4 pt-8">
+            <img src="img/nasiicon.svg" alt="Nasi Logo" class="h-20 w-20 rounded-lg shadow-md">
+            <div>
+                <div class="text-4xl md:text-6xl font-extrabold">Nasi</div>
+                <div class="text-xl md:text-2xl font-bold text-gray-600">Social Media Platform</div>
+            </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">About This Project</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    <strong>NASI</strong> is a comprehensive full-stack social media and e-commerce platform that combines the best features of TikTok-style video sharing, Instagram-like social interactions, and Shopify-level e-commerce capabilities into one unified ecosystem. Built with modern technologies and enterprise-grade architecture, NASI demonstrates expertise across backend development, mobile applications, web development, and cloud infrastructure.
+                </p>
+                <p class="mb-4">
+                    This platform enables users to create and share short-form videos, engage with content through likes and comments, participate in live streaming sessions, shop for products seamlessly integrated within the social experience, and interact with other users through threads, stories, and direct messaging. The system is powered by AI-driven content moderation and personalized recommendations to ensure safe and engaging user experiences.
+                </p>
+                <p class="mb-4">
+                    With over <strong>200+ API endpoints</strong>, <strong>30+ database tables</strong>, and support for millions of concurrent users through scalable architecture, NASI showcases production-ready development practices including Docker containerization, real-time WebSocket communication, distributed caching with Redis, event streaming with Kafka, and cloud-native storage solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Features</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Video System -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Video System (TikTok-style)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Video upload with multiple format support</li>
+                        <li>Vertical scrolling feed with autoplay</li>
+                        <li>Like, comment, share, and save functionality</li>
+                        <li>Video editing with filters and effects</li>
+                        <li>Slideshow creation from multiple images</li>
+                        <li>View count and watch time analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Live Streaming -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Live Streaming</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>RTMP ingest and WebRTC support</li>
+                        <li>Real-time chat and live reactions</li>
+                        <li>Virtual gifts and monetization</li>
+                        <li>Multi-bitrate adaptive streaming</li>
+                        <li>Screen sharing and co-hosting</li>
+                        <li>Live analytics and viewer tracking</li>
+                    </ul>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">E-commerce Integration</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Complete product catalog management</li>
+                        <li>Shopping cart and wishlist</li>
+                        <li>Multi-step checkout process</li>
+                        <li>Order tracking and management</li>
+                        <li>Product reviews and ratings</li>
+                        <li>Seller dashboard with analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Social Features -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Social Features</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>User profiles (personal & business)</li>
+                        <li>Follow/unfollow system</li>
+                        <li>Threads and posts with nested comments</li>
+                        <li>Direct messaging and group chats</li>
+                        <li>Stories (24-hour ephemeral content)</li>
+                        <li>User discovery and recommendations</li>
+                    </ul>
+                </div>
+
+                <!-- AI & Content Moderation -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">AI-Powered Content Moderation</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>NSFW and violence detection</li>
+                        <li>Hate speech and spam filtering</li>
+                        <li>Automated content categorization</li>
+                        <li>Viral potential prediction</li>
+                        <li>OCR text extraction</li>
+                        <li>Speech-to-text analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Notifications & Real-time -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Real-time Features</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>WebSocket-based instant updates</li>
+                        <li>Push notifications (Firebase)</li>
+                        <li>In-app and email notifications</li>
+                        <li>Real-time comment updates</li>
+                        <li>Live typing indicators</li>
+                        <li>Instant like and share reactions</li>
+                    </ul>
+                </div>
+
+                <!-- Gamification -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Gamification & Engagement</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Interactive games and challenges</li>
+                        <li>Achievement system and badges</li>
+                        <li>Leaderboards and rankings</li>
+                        <li>Daily challenges and streaks</li>
+                        <li>Points and reward system</li>
+                        <li>Level progression tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Search & Discovery -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Search & Discovery</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Elasticsearch-powered search</li>
+                        <li>User, video, and product search</li>
+                        <li>Hashtag and location search</li>
+                        <li>Trending content discovery</li>
+                        <li>Personalized "For You" feed</li>
+                        <li>Search history and suggestions</li>
+                    </ul>
+                </div>
+
+                <!-- Polls & Interactivity -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Polls & Interactive Content</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Create multiple-choice polls</li>
+                        <li>Vote and view results</li>
+                        <li>Poll duration settings</li>
+                        <li>Poll analytics and insights</li>
+                        <li>Share polls across platform</li>
+                    </ul>
+                </div>
+
+                <!-- Business Tools -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Business & Analytics</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Business account profiles</li>
+                        <li>Comprehensive analytics dashboard</li>
+                        <li>Content performance metrics</li>
+                        <li>Audience demographics insights</li>
+                        <li>Revenue and sales reporting</li>
+                        <li>Advertisement campaign management</li>
+                    </ul>
+                </div>
+
+                <!-- Monetization -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Creator Monetization</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Virtual gifts and tipping</li>
+                        <li>Subscription tiers</li>
+                        <li>Sponsored content support</li>
+                        <li>Revenue sharing program</li>
+                        <li>Payout management</li>
+                        <li>Financial transaction history</li>
+                    </ul>
+                </div>
+
+                <!-- Security & Privacy -->
+                <div class="border-l-4 border-green-400 pl-4">
+                    <h3 class="text-xl font-bold mb-2">Security & Privacy</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>JWT authentication with bcrypt</li>
+                        <li>Private account mode</li>
+                        <li>Granular privacy controls</li>
+                        <li>Block and mute functionality</li>
+                        <li>GDPR compliance features</li>
+                        <li>Data export and account deletion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-green-50 rounded-lg border-2 border-green-400">
+                <p class="text-lg font-bold text-gray-900">
+                    <strong>20+ Major Feature Categories</strong> with over <strong>100+ Individual Features</strong> including music integration, location services, automation workflows, content translation, and advanced video analytics.
+                </p>
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Technologies Used</div>
+
+            <!-- Backend Technologies -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Backend Technologies</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Go 1.24+</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Gin Framework</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Kratos v2.8</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">PostgreSQL 13+</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">GORM</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Redis 6+</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Apache Kafka</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">WebSocket</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">JWT Authentication</span>
+                    <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Elasticsearch</span>
+                </div>
+            </div>
+
+            <!-- Frontend - Android -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Frontend - Android Native</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Kotlin</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Jetpack Compose</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">MVVM Architecture</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Hilt (Dagger)</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Retrofit 2</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Room Database</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Coroutines</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Coil</span>
+                    <span class="bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-bold">Material Design 3</span>
+                </div>
+            </div>
+
+            <!-- Frontend - Web -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Frontend - Web Application</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Next.js 15</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">TypeScript 5</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Tailwind CSS 4</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Zustand</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">React Hook Form</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">SWR</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Axios</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Socket.io</span>
+                    <span class="bg-purple-400 text-gray-900 px-4 py-2 rounded-full font-bold">Framer Motion</span>
+                </div>
+            </div>
+
+            <!-- Infrastructure & DevOps -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Infrastructure & DevOps</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Docker</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Docker Compose</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">Cloudflare R2</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">AWS S3</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">NGINX RTMP</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">LiveKit</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">GitHub Actions</span>
+                    <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold">PostGIS</span>
+                </div>
+            </div>
+
+            <!-- Additional Technologies -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Additional Features & Services</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Firebase Cloud Messaging</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Gmail SMTP</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">React Native</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">OpenAPI/Swagger</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Ory Kratos</span>
+                    <span class="bg-gray-300 text-gray-900 px-4 py-2 rounded-full font-bold">Snowflake ID</span>
+                </div>
+            </div>
+
+            <!-- Architecture Highlight -->
+            <div class="mt-6 p-4 bg-gray-900 text-gray-50 rounded-lg">
+                <p class="text-lg font-bold mb-2">Architecture Highlights:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>42 Specialized API Routers</strong> - Modular, microservices-ready architecture</li>
+                    <li><strong>Multi-Frontend Strategy</strong> - Android Native, Web (Next.js), and React Native</li>
+                    <li><strong>Real-time Communication</strong> - WebSocket for instant updates, Kafka for event streaming</li>
+                    <li><strong>Scalable Storage</strong> - Cloudflare R2 with CDN integration for global content delivery</li>
+                    <li><strong>Production-Ready</strong> - Docker containerization, CI/CD pipelines, comprehensive logging</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Screenshots</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- PLACEHOLDER: Add your screenshots here -->
+                <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-500 font-bold">[Screenshot 1]</span>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-500 font-bold">[Screenshot 2]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Run -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">How to Run (Localhost)</div>
+
+            <!-- Prerequisites -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Prerequisites</h3>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Backend:</strong> Go 1.24+, PostgreSQL 13+, Redis 6+, Docker & Docker Compose</li>
+                        <li><strong>Android:</strong> Android Studio, JDK 17+, Android SDK 33+, Gradle 8.0+</li>
+                        <li><strong>Web:</strong> Node.js 18+, npm or yarn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Option 1: Docker (Recommended) -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Option 1: Docker Setup (Recommended)</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Navigate to backend directory
+cd nasi-main-app/backend
+
+# Start all services with Docker
+docker-compose up -d
+
+# Backend runs at:
+# - http://localhost:8001 (Docker)
+# - PostgreSQL: localhost:5432
+# - Redis: localhost:6379
+# - Kafka: localhost:9092
+# - LiveKit: localhost:7880
+# - Owncast: http://localhost:8084</code></pre>
+                </div>
+            </div>
+
+            <!-- Option 2: Local Development -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Option 2: Local Development</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># 1. Start dependencies only (PostgreSQL & Redis)
+cd nasi-main-app/backend
+docker-compose up -d postgres_dev redis
+
+# 2. Configure environment variables
+cp .env.example .env
+# Edit .env with your settings:
+# - Database credentials
+# - JWT secret key
+# - Cloudflare R2 credentials
+# - Gmail SMTP settings
+
+# 3. Run backend server
+go mod download
+go run main.go
+
+# Backend runs at http://localhost:8000</code></pre>
+                </div>
+            </div>
+
+            <!-- Android Setup -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Running Android App</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Navigate to Android directory
+cd nasi-main-app/frontendAndroid
+
+# Grant execute permission
+chmod +x gradlew
+
+# Fast build (skip tests & lint)
+./gradlew assembleDebug -x test -x lint
+
+# Install to connected device/emulator
+./gradlew installDebug
+
+# Or open in Android Studio and click Run
+
+# APK output location:
+# app/build/outputs/apk/debug/app-debug.apk</code></pre>
+                </div>
+                <div class="mt-3 p-3 bg-blue-50 rounded border-l-4 border-blue-400">
+                    <p class="text-sm text-gray-700">
+                        <strong>Note:</strong> Update backend URL in <code>app/build.gradle.kts</code>.
+                        For local dev, use <code>http://10.0.2.2:8000/</code> (Android emulator) or your local IP for physical devices.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Web Frontend Setup -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Running Web Frontend</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Navigate to web frontend directory
+cd nasi-main-app/frontend-web
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp env.local.example .env.local
+# Edit .env.local:
+# NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+# NEXT_PUBLIC_WEBSOCKET_URL=ws://localhost:8000/ws/comments
+
+# Start development server
+npm run dev
+
+# Web app runs at http://localhost:3000
+
+# Build for production
+npm run build
+npm run start</code></pre>
+                </div>
+            </div>
+
+            <!-- Environment Variables -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Key Environment Variables</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Backend .env configuration
+DATABASE_HOST=localhost
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_NAME=nasi_db
+
+JWT_SECRET=your-secure-jwt-secret-key-32byteslong123
+
+# Cloudflare R2 Storage
+R2_ACCOUNT_ID=your-account-id
+R2_ACCESS_KEY_ID=your-access-key-id
+R2_SECRET_ACCESS_KEY=your-secret-access-key
+R2_BUCKET_NAME=your-bucket-name
+
+# Email (Gmail SMTP)
+GMAIL_FROM_EMAIL=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-gmail-app-password</code></pre>
+                </div>
+            </div>
+
+            <!-- Testing -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Testing the Application</h3>
+                <div class="bg-gray-900 text-gray-50 p-6 rounded-lg">
+                    <pre class="text-sm md:text-base overflow-x-auto"><code># Test backend health
+curl http://localhost:8000/
+
+# Test video upload (after login)
+curl -X POST http://localhost:8000/api/videos/upload \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+  -F "video=@test-video.mp4"</code></pre>
+                </div>
+            </div>
+
+            <!-- Quick Start Summary -->
+            <div class="p-4 bg-green-50 rounded-lg border-2 border-green-400">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Quick Start Summary</h4>
+                <ol class="list-decimal list-inside text-gray-700 space-y-1">
+                    <li>Start backend: <code class="bg-gray-200 px-2 py-1 rounded">docker-compose up -d</code> or <code class="bg-gray-200 px-2 py-1 rounded">go run main.go</code></li>
+                    <li>Run Android: Build APK and install, or open in Android Studio</li>
+                    <li>Run Web: <code class="bg-gray-200 px-2 py-1 rounded">npm install && npm run dev</code></li>
+                    <li>Access web at <code class="bg-gray-200 px-2 py-1 rounded">http://localhost:3000</code></li>
+                    <li>Backend API at <code class="bg-gray-200 px-2 py-1 rounded">http://localhost:8000</code></li>
+                </ol>
+            </div>
+
+            <!-- VSCode Tasks (Recommended) -->
+            <div class="mt-8">
+                <h3 class="text-xl font-bold mb-3 text-gray-800">🚀 Recommended: Using VSCode Tasks (Easiest Method)</h3>
+                <div class="p-4 bg-purple-50 rounded-lg border-2 border-purple-400">
+                    <p class="text-gray-700 mb-3">
+                        The project includes pre-configured VSCode tasks for instant startup. Simply open the project in VSCode and use:
+                    </p>
+                    <div class="bg-gray-900 text-gray-50 p-4 rounded-lg mb-4">
+                        <pre class="text-sm md:text-base overflow-x-auto"><code># Open Command Palette
+Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac)
+
+# Type: "Tasks: Run Task"
+# Then select one of these tasks:</code></pre>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Quick Start Tasks -->
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">⚡ Quick Start Tasks</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li><strong>🚀 Quick Start (Docker + Air)</strong> - Start everything with hot reload (Recommended)</li>
+                                <li><strong>🐳 Start All Docker Services</strong> - Start PostgreSQL, Redis, Kafka, LiveKit, etc.</li>
+                                <li><strong>🚀 Start Air (Hot Reload Go)</strong> - Run backend with automatic reload on code changes</li>
+                                <li><strong>⚡ Quick Go Run</strong> - Simple Go run without hot reload</li>
+                            </ul>
+                        </div>
+
+                        <!-- Frontend Tasks -->
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">🌐 Frontend Tasks</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li><strong>🌐 Start Frontend Web (Next.js)</strong> - Run web frontend at localhost:3000</li>
+                                <li><strong>📱 Android Build & Deploy</strong> - Build Android APK</li>
+                                <li><strong>📱 Android Install & Deploy</strong> - Install APK to device (requires ADB)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Production Tasks -->
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">🎯 Production & Advanced</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li><strong>🚀 Start Unified Stack (Backend + ML)</strong> - Full stack with ML services</li>
+                                <li><strong>📈 Unified Stack - With Monitoring</strong> - Includes Prometheus & Grafana</li>
+                                <li><strong>🎯 Unified Stack - Production Mode</strong> - Load balanced with multiple instances</li>
+                                <li><strong>☁️ Start Cloudflare Tunnel</strong> - Expose local server to internet</li>
+                            </ul>
+                        </div>
+
+                        <!-- Utility Tasks -->
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">🛠️ Utility Tasks</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li><strong>📊 Show Docker Status</strong> - Check all running services</li>
+                                <li><strong>🛑 Stop All Docker Services</strong> - Cleanly stop everything</li>
+                                <li><strong>🧹 Clean Docker</strong> - Remove containers, volumes, and images</li>
+                                <li><strong>🧪 Go Test</strong> - Run all Go tests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-blue-50 rounded border-l-4 border-blue-400">
+                        <p class="text-sm text-gray-700">
+                            <strong>💡 Pro Tip:</strong> The <strong>"🚀 Quick Start (Docker + Air)"</strong> task is the fastest way to start development.
+                            It starts all dependencies in the background and launches the backend with hot reload - perfect for development!
+                        </p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-yellow-50 rounded border-l-4 border-yellow-400">
+                        <p class="text-sm text-gray-700">
+                            <strong>📍 Tasks Location:</strong> All tasks are configured in <code>.vscode/tasks.json</code>.
+                            You can customize them or add new tasks as needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="w-full bg-gray-200 text-center block p-4">
+    <span class="font-extrabold text-gray-900 text-xl">
+        <div class="mt-1">© <script>document.write(new Date().getFullYear())</script> Ahmad Faiz. All Rights Reserved.</div></span>
+        <a href="https://www.linkedin.com/in/ahmad-faiz-132b95272/" target="_blank">
+        <div class="text-xl mt-3 font-extrabold text-gray-50 bg-gray-900 hover:bg-green-500 hover:border-green-500 duration-200 cursor-pointer hover:shadow-md hover:text-gray-900 border-4 p-2 inline-block rounded-md border-gray-900 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="relative -top-0.5 inline-block h-6 w-6">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+           My LinkedIn Page
+        </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

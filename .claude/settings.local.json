@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(dir:*)",
+      "Bash(ls -la \"D:\\Projects\\wallpaper-desktop\\fluids-wallpaper\"\" && echo \"---\" && ls -la \"D:Projectswallpaper-desktopparticle-wallpaper\"\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

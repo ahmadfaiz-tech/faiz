@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Say No to Ads - uBlock Origin, YouTube Revanced, NewPipe by Ahmad Faiz">
+    <meta name="keywords" content="Ahmad, Faiz, uBlock Origin, YouTube Revanced, NewPipe, Ad Blocker, Privacy">
+    <meta name="author" content="Ahmad Faiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Say No to Ads - Ahmad Faiz</title>
+</head>
+<body id="top" onload="checkScrollPosition()" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" style="background:rgb(53,211,153);background:rgba(53,211,153, 0.975);" class="fixed hidden md:block lg:block duration-300 ease nav-top-hidden shadow left-0 w-full p-4 text-gray-900 z-40">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <a href="index.html" class="kill-link-style xl:mr-6"><span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl rxl:text-3xl font-extrabold">
+                AF
+            </span></a>
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical-2 font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
+    </nav>
+
+  <div id="contact-me-pane" style="left:0;right:0;overflow-y:auto !important;margin-left: auto;margin-right: auto;max-height: 83%;" class="fixed duration-500 ease-in-out border-4 text-center border-green-400 border-b-0 p-6 md:p-12 ease contact-me-inactive rounded-t-xl bg-gray-900 text-gray-50 shadow-xl left-0 z-30 w-11/12 auto">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.620" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+    </div>
+    <div class="text-2xl no-select md:text-3xl lg:text-5xl font-extrabold">Contact Me</div>
+        <div class="absolute right-6 top-4 md:right-16 md:top-12">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggleContactMe('hide')" class="cursor-pointer h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.420" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+        </div>
+
+        <div class="mt-10 text-left">
+            <div class="text-gray-50 text-xl md:text-2xl font-extrabold">Your Name</div>
+            <form action="https://formspree.io/f/meowdbej" method="POST">
+            <input type="text" required="" name="name" class="w-full mt-2 p-4 rounded-md font-bold text-gray-900 shadow text-xl md:text-2xl" placeholder="Enter name">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Email</div>
+            <input type="email" required="" name="email" class="w-full mt-2 p-4 rounded-md shadow text-xl text-gray-900 font-bold md:text-2xl" placeholder="Enter email">
+
+            <div class="text-gray-50 text-xl mt-4 md:text-2xl font-extrabold">Your Message</div>
+            <textarea type="text" required="" name="message" class="w-full mt-2 p-4 custom-textarea rounded-md shadow text-gray-900 font-bold text-xl md:text-2xl" placeholder="Enter message"></textarea>
+
+            <button type="submit" class="no-select px-4 p-2 text-xl mt-5 md:text-2xl lg:text-3xl border-4 border-gray-50 inline-block rounded-md cursor-pointer duration-200 hover:bg-gray-50 hover:text-gray-900 font-extrabold">Send Message</button>
+            </form>
+        </div>
+  </div>
+
+    <div class="h-6 fixed z-50 md:relative block w-full z-50 bg-green-400"></div>
+
+    <div class="xl:p-20 pt-10 xl:pb-22">
+        <div class="w-12/12 sm:w-11/12 md:w-12/12 lg:w-9/12 col-centered">
+            <span class="hidden md:block lg:block">
+            <a href="index.html" class="kill-link-style">
+                <span class="inline-block rounded-md animate__animated xl:mr-6 animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 inline-block text-2xl xl:text-3xl font-extrabold">
+                    AF
+                </span>
+            </a>
+
+            <a href="index.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay1 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical active font-extrabold">Work</a>
+            <a href="journey.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay2 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Journey</a>
+            <a href="life.html" class="inline-block animate__animated animate__fadeInDown kill-link-style delay3 ml-6 mr-3 duration-300 text-2xl xl:text-3xl cursor-pointer underline--magical font-extrabold">Life</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX delay4 ml-6 mr-3 duration-300 float-right text-2xl xl:text-3xl cursor-pointer border-4 px-2 xl:px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 rounded-md font-extrabold">Contact Me</span>
+            </span>
+
+            <span class="block md:hidden lg:hidden p-4">
+                <a href="index.html" class="kill-link-style">
+                    <span class="inline-block rounded-md animate__animated animate__fadeInDown border-4 border-gray-900 text-gray-900 select-none p-2 text-2xl font-extrabold">
+                        AF
+                    </span>
+                </a>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="index.html" class="underline--magical text-xl font-extrabold">Work</a>
+                    <a href="journey.html" class="underline--magical text-xl font-extrabold ml-4">Journey</a>
+                    <a href="life.html" class="underline--magical text-xl font-extrabold ml-4">Life</a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+  <div class="p-4 md:pt-24 pb-26 xl:p-20 bg-gray-50 text-gray-900">
+    <div class="sm:w-12/12 md:w-12/12 lg:w-9/12 col-centered">
+        <a href="index.html#media" class="kill-link-style">
+            <div class="animate__animated animate__fadeIn delay2 inline-flex items-center mb-4 p-2 px-4 text-lg md:text-xl font-extrabold text-gray-900 border-4 border-gray-900 rounded-md hover:bg-gray-900 hover:text-gray-50 duration-200 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Technical Hobbies
+            </div>
+        </a>
+
+        <!-- Header -->
+        <div class="animate__animated animate__fadeIn delay2 p-4 pt-8">
+            <div class="text-4xl md:text-6xl font-extrabold">Say No to Ads</div>
+            <div class="text-xl md:text-2xl font-bold text-gray-600 mt-2">Clean, Fast, and Ad-Free Browsing Experience</div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Why Block Ads?</div>
+            <div class="text-lg md:text-xl leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Online advertising has become increasingly intrusive, tracking your behavior across websites, slowing down page loads, and consuming bandwidth. I've mastered various tools and techniques to create a cleaner, faster, and more private browsing experience.
+                </p>
+                <p class="mb-4">
+                    From browser extensions to modified applications, I configure comprehensive ad-blocking solutions that work across desktop and mobile devices.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tools Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Ad-Blocking Tools I Use</div>
+
+            <!-- uBlock Origin -->
+            <div class="bg-red-100 p-6 rounded-lg border-2 border-red-400 mb-4">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl text-red-700">uBlock Origin</div>
+                    <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-bold">Desktop</span>
+                    <span class="bg-yellow-500 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Firefox Android</span>
+                </div>
+                <p class="text-gray-700 mb-3">The gold standard of browser ad blocking. Open source, efficient, and highly configurable.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Wide Filter Support:</strong> EasyList, EasyPrivacy, regional lists</li>
+                        <li><strong>Custom Filters:</strong> Add your own blocking rules</li>
+                        <li><strong>Element Picker:</strong> Block specific page elements</li>
+                    </ul>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Dynamic Filtering:</strong> Advanced blocking modes</li>
+                        <li><strong>Low Resource Usage:</strong> Minimal CPU/memory impact</li>
+                        <li><strong>No "Acceptable Ads":</strong> Blocks everything, no exceptions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- YouTube Revanced -->
+            <div class="bg-red-600 text-white p-6 rounded-lg mb-4">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl">YouTube ReVanced</div>
+                    <span class="bg-green-400 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Android</span>
+                </div>
+                <p class="mb-3">A modified YouTube app for Android that removes ads and adds premium features for free.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="space-y-1">
+                        <li><strong>No Video Ads:</strong> Skip all pre-roll, mid-roll ads</li>
+                        <li><strong>Background Play:</strong> Listen with screen off</li>
+                        <li><strong>PiP Mode:</strong> Picture-in-picture support</li>
+                        <li><strong>SponsorBlock:</strong> Skip sponsored segments</li>
+                    </ul>
+                    <ul class="space-y-1">
+                        <li><strong>Return Dislikes:</strong> See dislike counts again</li>
+                        <li><strong>AMOLED Theme:</strong> True black dark mode</li>
+                        <li><strong>HDR Support:</strong> High dynamic range video</li>
+                        <li><strong>Download Videos:</strong> Save for offline viewing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NewPipe -->
+            <div class="bg-red-100 p-6 rounded-lg border-2 border-red-400 mb-4">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl text-red-700">NewPipe</div>
+                    <span class="bg-green-400 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Android</span>
+                </div>
+                <p class="text-gray-700 mb-3">A lightweight, open-source YouTube client that respects your privacy.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>No Google Account:</strong> Watch without signing in</li>
+                        <li><strong>No Ads:</strong> Clean viewing experience</li>
+                        <li><strong>Background Play:</strong> Audio-only mode</li>
+                    </ul>
+                    <ul class="text-gray-700 space-y-1">
+                        <li><strong>Download Support:</strong> Save videos and audio</li>
+                        <li><strong>Popup Player:</strong> Floating video window</li>
+                        <li><strong>Import Subscriptions:</strong> From YouTube account</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AdBlock -->
+            <div class="bg-red-500 text-white p-6 rounded-lg mb-4">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl">AdBlock</div>
+                    <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-bold">Desktop</span>
+                    <span class="bg-yellow-500 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Safari</span>
+                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-full font-bold">iOS</span>
+                </div>
+                <p class="mb-3">One of the most popular ad blockers with over 65 million users. Simple to use with powerful blocking capabilities.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="space-y-1">
+                        <li><strong>Block Ads:</strong> Remove ads from websites automatically</li>
+                        <li><strong>Skip Cookie Walls:</strong> Bypass annoying cookie consent popups</li>
+                        <li><strong>Block Distractions:</strong> Hide distracting elements on pages</li>
+                        <li><strong>Pause on Sites:</strong> Whitelist specific websites easily</li>
+                    </ul>
+                    <ul class="space-y-1">
+                        <li><strong>Custom Filters:</strong> Add your own blocking rules</li>
+                        <li><strong>Malware Protection:</strong> Block malicious domains</li>
+                        <li><strong>Privacy Protection:</strong> Stop tracking scripts</li>
+                        <li><strong>YouTube Ads:</strong> Block video ads on YouTube</li>
+                    </ul>
+                </div>
+                <div class="mt-4 bg-red-600 p-4 rounded-lg">
+                    <div class="font-extrabold text-red-200 mb-2">AdBlock vs uBlock Origin</div>
+                    <p class="text-red-100 text-sm">I use AdBlock as a backup option, especially on Safari and iOS devices where uBlock Origin is not available. It's user-friendly and works well for basic ad blocking needs.</p>
+                </div>
+            </div>
+
+            <!-- AdGuard -->
+            <div class="bg-green-600 text-white p-6 rounded-lg mb-4">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl">AdGuard</div>
+                    <span class="bg-blue-400 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Windows</span>
+                    <span class="bg-gray-300 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Mac</span>
+                    <span class="bg-green-300 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Android</span>
+                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-full font-bold">iOS</span>
+                </div>
+                <p class="mb-3">A powerful ad blocker that works system-wide on desktop and mobile. Blocks ads in browsers and applications.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="space-y-1">
+                        <li><strong>System-Wide Blocking:</strong> Works in all apps, not just browsers</li>
+                        <li><strong>HTTPS Filtering:</strong> Blocks ads on encrypted connections</li>
+                        <li><strong>Custom DNS:</strong> Use AdGuard DNS for extra protection</li>
+                        <li><strong>Parental Control:</strong> Block adult content</li>
+                    </ul>
+                    <ul class="space-y-1">
+                        <li><strong>Tracking Protection:</strong> Stop trackers and analytics</li>
+                        <li><strong>Stealth Mode:</strong> Hide your online footprint</li>
+                        <li><strong>Browser Extension:</strong> Lightweight option for browsers only</li>
+                        <li><strong>Mobile Apps:</strong> Available for Android and iOS</li>
+                    </ul>
+                </div>
+                <div class="mt-4 bg-green-700 p-4 rounded-lg">
+                    <div class="font-extrabold text-green-200 mb-2">Why I Use AdGuard</div>
+                    <p class="text-green-100 text-sm">AdGuard blocks ads at the system level, meaning even apps like games and social media have their ads blocked. It's my go-to solution for a completely ad-free experience across my entire device.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BlockSite Section -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Block Distracting Websites with BlockSite</div>
+            <div class="bg-purple-600 text-white p-6 rounded-lg">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <div class="font-extrabold text-2xl">BlockSite</div>
+                    <span class="bg-blue-400 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Desktop Extension</span>
+                    <span class="bg-green-300 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">Android</span>
+                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-full font-bold">iOS</span>
+                </div>
+                <p class="mb-4">A browser extension and mobile app that helps you stay focused by blocking distracting websites and apps.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-purple-700 p-4 rounded-lg">
+                        <div class="font-extrabold text-purple-200 mb-2">Features I Use</div>
+                        <ul class="text-purple-100 space-y-1 text-sm">
+                            <li>• Block specific websites by URL</li>
+                            <li>• Schedule blocking times (work hours)</li>
+                            <li>• Block by keywords in URL</li>
+                            <li>• Redirect blocked sites to productive pages</li>
+                            <li>• Password protection to prevent disabling</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-700 p-4 rounded-lg">
+                        <div class="font-extrabold text-purple-200 mb-2">Websites I Block</div>
+                        <ul class="text-purple-100 space-y-1 text-sm">
+                            <li>• Social media (Facebook, Instagram, TikTok)</li>
+                            <li>• Video streaming (Netflix, YouTube during work)</li>
+                            <li>• News sites (avoid doomscrolling)</li>
+                            <li>• Shopping sites (Shopee, Lazada)</li>
+                            <li>• Gaming sites and forums</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-purple-800 p-4 rounded-lg">
+                    <div class="font-extrabold text-yellow-400 mb-2">My BlockSite Strategy</div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-white mb-1">Work Mode</div>
+                            <p class="text-purple-200">Block all social media and entertainment from 9 AM - 5 PM on weekdays</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-white mb-1">Study Mode</div>
+                            <p class="text-purple-200">Block everything except educational sites during exam periods</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-white mb-1">Focus Mode</div>
+                            <p class="text-purple-200">One-click to block all distractions for deep work sessions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Tools -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Additional Privacy Tools</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg text-center">
+                    <div class="flex flex-wrap justify-center gap-1 mb-2">
+                        <span class="bg-purple-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">Raspberry Pi</span>
+                        <span class="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">Linux Server</span>
+                    </div>
+                    <div class="font-extrabold text-xl text-green-400 mb-2">Pi-hole</div>
+                    <p class="text-sm">Network-wide ad blocking at DNS level. Blocks ads on all devices.</p>
+                </div>
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg text-center">
+                    <div class="flex flex-wrap justify-center gap-1 mb-2">
+                        <span class="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">All Devices</span>
+                    </div>
+                    <div class="font-extrabold text-xl text-green-400 mb-2">AdGuard DNS</div>
+                    <p class="text-sm">Free DNS service that blocks ads and trackers system-wide.</p>
+                </div>
+                <div class="bg-gray-900 text-gray-50 p-4 rounded-lg text-center">
+                    <div class="flex flex-wrap justify-center gap-1 mb-2">
+                        <span class="bg-blue-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">Windows</span>
+                        <span class="bg-gray-300 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">Mac</span>
+                        <span class="bg-green-400 text-gray-900 text-xs px-2 py-0.5 rounded-full font-bold">Android</span>
+                        <span class="bg-gray-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">iOS</span>
+                    </div>
+                    <div class="font-extrabold text-xl text-green-400 mb-2">Brave Browser</div>
+                    <p class="text-sm">Browser with built-in ad and tracker blocking.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Lists -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Filter Lists I Recommend</div>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">EasyList</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">EasyPrivacy</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">uBlock Filters</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Fanboy's Annoyance</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">AdGuard Base</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Malware Domains</span>
+                <span class="bg-green-400 text-gray-900 px-4 py-2 rounded-full font-bold">Peter Lowe's List</span>
+            </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="animate__animated animate__fadeInUp delay2 p-4 mt-6 bg-green-400 text-gray-900 rounded-lg">
+            <div class="text-2xl md:text-3xl font-extrabold mb-4">Benefits of Ad-Free Browsing</div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-extrabold mb-2">50%+</div>
+                    <div class="font-bold">Faster Loading</div>
+                    <div class="text-sm">No ads to download</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-extrabold mb-2">40%</div>
+                    <div class="font-bold">Less Data Usage</div>
+                    <div class="text-sm">Save bandwidth</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-extrabold mb-2">100%</div>
+                    <div class="font-bold">Privacy Protected</div>
+                    <div class="text-sm">No tracking scripts</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-extrabold mb-2">0</div>
+                    <div class="font-bold">Malware Risk</div>
+                    <div class="text-sm">No malicious ads</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="w-full bg-gray-200 text-center block p-4">
+    <span class="font-extrabold text-gray-900 text-xl">
+        <div class="mt-1">© <script>document.write(new Date().getFullYear())</script> Ahmad Faiz. All Rights Reserved.</div></span>
+        <a href="https://www.linkedin.com/in/ahmad-faiz-132b95272/" target="_blank">
+        <div class="text-xl mt-3 font-extrabold text-gray-50 bg-gray-900 hover:bg-green-500 hover:border-green-500 duration-200 cursor-pointer hover:shadow-md hover:text-gray-900 border-4 p-2 inline-block rounded-md border-gray-900 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="relative -top-0.5 inline-block h-6 w-6">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+           My LinkedIn Page
+        </div>
+    </a>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

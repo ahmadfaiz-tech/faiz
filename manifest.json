@@ -1,0 +1,39 @@
+{
+  "url": "https://www.zachjordan.io/",
+  "title": "Zachary Jordan",
+  "scrapedAt": "2025-11-23T14:33:24.965Z",
+  "stats": {
+    "downloaded": 26,
+    "failed": 0,
+    "skipped": 8,
+    "total": 34
+  },
+  "downloadedFiles": [
+    "css/style.css",
+    "img/zach.png",
+    "img/bird.png",
+    "img/goose.svg",
+    "img/butterfly.webp",
+    "img/boycott-buddy.png",
+    "img/finger.png",
+    "img/logo-aap.png",
+    "img/collab.jpg",
+    "img/love.png",
+    "img/easy-logo.png",
+    "img/corrosive.png",
+    "img/wave.png",
+    "img/money.png",
+    "img/cureit.png",
+    "img/eye.jpg",
+    "img/contextualize.png",
+    "img/plane.png",
+    "img/blood-orange.png",
+    "img/laptop.png",
+    "img/retired-icon.jpeg",
+    "img/logo.jpg",
+    "img/animal.png",
+    "img/easy-emdr.png",
+    "img/smaller-boycott.png",
+    "js/script.js"
+  ]
+}

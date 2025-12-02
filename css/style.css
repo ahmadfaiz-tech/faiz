@@ -1,0 +1,219 @@
+html {
+    scroll-behavior: smooth !important;
+  }
+
+.col-centered
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                               supported by Chrome, Edge, Opera and Firefox */
+}
+
+.contact-me-inactive
+{
+
+    bottom:-100%;
+}
+
+.contact-me-active
+{
+    bottom:0px;
+}
+
+.custom-textarea
+{
+  height:210px;
+}
+
+.nav-top-hidden
+{
+    top: -160px;
+}
+
+.nav-top-visible
+{
+    top:0px;
+}
+
+.underline--magical {
+    /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
+    background-image: linear-gradient(120deg, #35D399 0%, #35D399 100%);
+    
+    background-repeat: no-repeat;
+    background-size: 100% 0.25em;
+    background-position: 0 89%;
+    transition: background-size 0.2s ease-in;
+    padding-right: 7px;
+    padding-left: 3px;
+
+  }
+
+  .underline--magical:hover,
+  .underline--magical.active
+  {
+    background-size: 100% 89%;
+    padding-top: 3px;
+  }
+
+  .underline--magical-2 {
+    /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
+    background-image: linear-gradient(120deg, #FDE68A 0%, #FDE68A 100%);
+    
+    background-repeat: no-repeat;
+    background-size: 100% 0.25em;
+    background-position: 0 89%;
+    transition: background-size 0.2s ease-in;
+    padding-right: 7px;
+    padding-left: 3px;
+    padding-top: -20px;
+
+  }
+
+  .underline--magical-2:hover,
+  .underline--magical-2.active
+  {
+    background-size: 100% 89%;
+    padding-top: 3px;
+  }
+
+  .move-up-slightly
+  {
+    position: relative;
+    top:0px;
+    transition: all 0.3s ease-out;
+  }
+
+  .move-up-slightly:hover
+  {
+    top:-6px;
+  }
+
+  .decorate-image
+  {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  }
+
+  .project-picture
+  {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+
+  .offscreen-nav-hidden
+  {
+    right:-100% !important;
+  }
+
+  .offscreen-nav
+  {
+    position: fixed;
+    right:0px;
+    height:100%;
+    width:100%;
+  }
+
+  .hover-padding:hover
+  {
+    padding: 1.5rem;
+  }
+
+  .delay1
+  {
+      animation-delay: 0.15s;
+  }
+
+  .delay2
+  {
+      animation-delay: 0.3s;
+  }
+
+  .delay3
+  {
+      animation-delay: 0.45s;
+  }
+
+  .delay4
+  {
+    animation-delay: 0.5s;
+  }
+
+  .easy-emdr-demo
+  {
+    background-image: url("../img/skull.png");
+  }
+
+  .animal-demo
+  {
+    background-image: url("../img/smaller-boycott.png");
+  }
+
+  .collab-spot-demo
+  {
+    background-image: url("../img/collab-demo2.jpg");
+  }
+
+  .fk-nestle-demo
+  {
+    background-image: url("../img/smaller-nestle.png");
+  }
+
+  .boycott-demo
+  {
+    background-image: url("../img/moto.jpg");
+  }
+
+  .safe-substance-demo
+  {
+    background-image: url("../img/safe-substance.png");
+  }
+
+  .cure-it-demo
+  {
+    background-image: url("../img/cure-it.jpg");
+  }
+
+  .bodily-autonomy-demo
+  {
+    background-image: url("../img/bodily-autonomy.jpg");
+  }
+
+
+  a {
+    color: inherit; 
+    text-decoration: inherit; 
+  }
+
+  a:visited
+  {
+      color:inherit;
+      text-decoration: inherit;
+  }
+
+  @media only screen 
+  and (max-width: 413px)
+  {
+    .contact-me-inactive
+    {
+        bottom:-170%;
+    }
+  }
+
+  @media only screen 
+  and (max-height:500px)
+  {
+    .contact-me-inactive
+    {
+      bottom:-500%;
+    }
+  }
