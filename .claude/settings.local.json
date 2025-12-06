@@ -5,7 +5,9 @@
       "Bash(tree:*)",
       "Bash(find:*)",
       "Bash(dir:*)",
-      "Bash(ls -la \"D:\\Projects\\wallpaper-desktop\\fluids-wallpaper\"\" && echo \"---\" && ls -la \"D:Projectswallpaper-desktopparticle-wallpaper\"\")"
+      "Bash(ls -la \"D:\\Projects\\wallpaper-desktop\\fluids-wallpaper\"\" && echo \"---\" && ls -la \"D:Projectswallpaper-desktopparticle-wallpaper\"\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
