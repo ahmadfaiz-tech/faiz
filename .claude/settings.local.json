@@ -7,7 +7,11 @@
       "Bash(dir:*)",
       "Bash(ls -la \"D:\\Projects\\wallpaper-desktop\\fluids-wallpaper\"\" && echo \"---\" && ls -la \"D:Projectswallpaper-desktopparticle-wallpaper\"\")",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(python tools/generate_descriptions.py:*)"
     ],
     "deny": [],
     "ask": []
