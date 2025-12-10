@@ -22,6 +22,24 @@
                 "panel": "shared"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Git Commit & Push to gh-pages",
+            "type": "shell",
+            "command": "node",
+            "args": [
+                "commit.js"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
         }
     ]
 }
